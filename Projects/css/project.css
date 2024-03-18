@@ -1,0 +1,139 @@
+body{
+    background-image: url('/assets/main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+body background-image:hover{
+    transform: scale(1.4);
+}
+
+.heading{
+    height: 400px;
+    margin: 15px;
+}
+.head1{
+    width: 40%;
+    float: left;
+}
+.head2{
+    width: 60%;
+    float: right;
+    padding-top: 30px;
+}
+.head2 a{
+    text-decoration: none;
+}
+.head2 a:hover{
+    transform: translateY(-3px) translateX(-5px);
+    color: #fff;
+}
+.bridge{
+    width: 222.15px;
+    height: 67.80px;
+    margin-left: 20px;
+}
+.bri{  
+    color: white; 
+    font-size: 64px; 
+    font-family: Inspiration; 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+.dge{  
+    color: white; 
+    font-size: 64px; 
+    font-family: Italianno; 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+.home{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 12%;
+    float:right;
+}
+.gallery{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 12%;
+    float:right;
+}
+.contact{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 12%;
+    float:right;
+}
+.about{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 12%;
+    float:right;
+}
+.ticket{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 12%;
+    float:right;
+}
+.login{
+    font-size: 20px;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    width: 8%;
+    float:right;
+}
+.discover{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.seemore{
+    align-items: center;
+}
+.content{
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    margin-right: 45px;
+    font-size: 25px;
+}
+.button{
+    width: 350px; 
+    height: 86.32px; 
+    background: rgba(217, 217, 217, 0.30); 
+    border-radius: 50px;
+}
+.see{
+    padding-top:12px;
+    text-align: center; 
+    color: white; 
+    font-family: Abel;
+    font-size: 48px;
+}
+.container {
+    font-family: arial;
+    font-size: 24px;
+    width: 100%;
+}
+.child { 
+    width: fit-content;
+    margin: 0 auto;
+}
+div{
+    opacity: 0;
+    transition:  opacity 1s ease-in-out;
+}
+
+
+
