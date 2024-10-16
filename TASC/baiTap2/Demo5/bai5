@@ -1,0 +1,43 @@
+1. Cấp phát tĩnh và cấp phát động
+a. Cấp phát tĩnh (Static Allocation)
+Định nghĩa: Cấp phát tĩnh là quá trình phân bổ bộ nhớ cho các biến tại thời điểm biên dịch.
+Kích thước và kiểu dữ liệu của biến được xác định trước và không thể thay đổi trong suốt
+ quá trình thực thi chương trình.
+ Đặc điểm:
+ Tốc độ truy cập nhanh hơn.
+ Bộ nhớ được cấp phát một lần và tồn tại cho đến khi chương trình kết thúc.
+ b. Cấp phát động (Dynamic Allocation)
+ Định nghĩa: Cấp phát động là quá trình phân bổ bộ nhớ trong thời gian chạy, thường thông qua các
+ phương thức như new.
+ Kích thước và kiểu dữ liệu của biến có thể thay đổi trong suốt quá trình thực thi chương trình.
+
+ Đặc điểm:
+
+ Bộ nhớ có thể được phân bổ và giải phóng trong thời gian chạy.
+ Tốc độ truy cập có thể chậm hơn do chi phí quản lý bộ nhớ.
+ 2. Phân biệt bộ nhớ Heap và bộ nhớ Stack
+ a. Bộ nhớ Stack
+ Định nghĩa: Bộ nhớ stack là vùng bộ nhớ dùng để lưu trữ các biến cục bộ và các thông tin liên quan
+ đến hàm (như địa chỉ trả về và tham số).
+
+ Đặc điểm:
+
+ Cấp phát và giải phóng tự động: Khi một hàm được gọi, không gian cần thiết được cấp phát trên stack;
+  khi hàm kết thúc, không gian đó sẽ được giải phóng.
+ Tốc độ truy cập nhanh hơn vì quản lý theo nguyên tắc LIFO (Last In, First Out).
+ Kích thước có giới hạn và thường nhỏ hơn so với heap.
+ b. Bộ nhớ Heap
+ Định nghĩa: Bộ nhớ heap là vùng bộ nhớ dùng để lưu trữ các đối tượng được tạo ra bằng cách cấp phát động.
+
+ Đặc điểm:
+
+ Cấp phát và giải phóng bộ nhớ thủ công: Bộ nhớ cần được quản lý bằng tay
+ (thông qua new và null trong Java). Garbage collector tự động giải phóng bộ nhớ không còn sử dụng.
+ Tốc độ truy cập chậm hơn so với stack.
+ Kích thước lớn hơn và linh hoạt hơn so với stack.
+ 3. So sánh
+ Đặc điểm	Stack	Heap
+ Kiểu lưu trữ	Biến cục bộ và thông tin hàm	Đối tượng và dữ liệu động
+ Quản lý bộ nhớ	Tự động (LIFO)	Thủ công (Garbage collection)
+ Tốc độ	Nhanh hơn	Chậm hơn
+ Kích thước	Hạn chế	Lớn hơn và linh hoạt hơn
