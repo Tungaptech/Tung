@@ -1,0 +1,48 @@
+1. Phân biệt Synchronous vs Asynchronous
+Synchronous (Đồng bộ):
+
+Định nghĩa: Trong lập trình đồng bộ, các thao tác được thực hiện theo thứ tự.
+Một thao tác phải hoàn tất trước khi thao tác tiếp theo bắt đầu.
+Ví dụ: Khi bạn gọi một hàm để tính toán,
+chương trình sẽ chờ đợi kết quả từ hàm đó trước khi tiếp tục với các lệnh tiếp theo.
+Asynchronous (Bất đồng bộ):
+
+Định nghĩa: Trong lập trình bất đồng bộ, các thao tác có thể được thực hiện độc lập.
+Chương trình có thể tiếp tục thực hiện các lệnh khác mà không cần chờ đợi kết quả của thao tác trước đó.
+Ví dụ: Khi bạn gửi một yêu cầu HTTP, bạn có thể tiếp tục thực hiện các lệnh khác mà không cần đợi phản hồi từ máy chủ.
+2. Phân biệt trường hợp sử dụng, ưu nhược điểm
+a. Synchronous
+Trường hợp sử dụng:
+
+Khi bạn cần các thao tác phải hoàn thành theo thứ tự,
+chẳng hạn như các tính toán liên tiếp hoặc các quy trình mà không thể chạy song song.
+Ưu điểm:
+
+Dễ hiểu và dễ quản lý hơn, đặc biệt trong các quy trình đơn giản.
+Kết quả của mỗi thao tác là rõ ràng và có thể dễ dàng kiểm soát.
+Nhược điểm:
+
+Thời gian chờ có thể làm giảm hiệu suất, đặc biệt trong các tác vụ I/O,
+khi mà chương trình phải chờ đợi các phản hồi.
+b. Asynchronous
+Trường hợp sử dụng:
+
+Khi bạn cần thực hiện các tác vụ mà không cần phải chờ đợi kết quả ngay lập tức,
+như tải dữ liệu từ server, thực hiện các tác vụ I/O nặng hoặc xử lý sự kiện.
+Ưu điểm:
+
+Tăng hiệu suất và khả năng phản hồi của ứng dụng, đặc biệt trong môi trường web hoặc ứng dụng người dùng.
+Giảm thời gian chờ bằng cách cho phép nhiều tác vụ chạy đồng thời.
+Nhược điểm:
+
+Khó khăn trong việc quản lý và xử lý lỗi, vì các tác vụ có thể hoàn thành ở nhiều thời điểm khác nhau.
+Cần sử dụng các kỹ thuật như callback, promise hoặc async/await để quản lý luồng thực thi.
+3. Tìm hiểu từ khóa synchronized trong Java
+synchronized là một từ khóa trong Java được sử dụng để điều khiển truy cập đến một tài nguyên chung
+từ nhiều thread (luồng).
+Nó giúp đảm bảo rằng chỉ một thread có thể truy cập vào một phần mã (method hoặc block) t
+rong cùng một thời điểm.
+
+Cách hoạt động:
+Khi một thread thực thi một phương thức hoặc block được đánh dấu là synchronized,
+nó sẽ khóa đối tượng (hoặc class) và ngăn chặn các thread khác truy cập vào phương thức hoặc block đó cho đến khi thread hiện tại hoàn thành.
