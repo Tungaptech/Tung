@@ -1,0 +1,31 @@
+1. Phân biệt throw và throws
+a. throw
+Định nghĩa: Dùng để ném một exception cụ thể trong một phương thức.
+Cách sử dụng: Thường được sử dụng trong thân của phương thức.
+
+b. throws
+Định nghĩa: Dùng để khai báo rằng một phương thức có thể ném một exception.
+Thường được sử dụng trong phần khai báo phương thức.
+Cách sử dụng: Được khai báo sau kiểu trả về của phương thức.
+
+2. Thế nào là Checked và Unchecked Exception
+a. Checked Exception
+Định nghĩa: Là những exception mà trình biên dịch yêu cầu phải được xử lý
+(bằng cách sử dụng try-catch hoặc khai báo throws).
+b. Unchecked Exception
+Định nghĩa: Là những exception không yêu cầu phải được xử lý,
+thường là các lỗi lập trình như chia cho 0 hoặc truy cập phần tử không tồn tại trong mảng.
+
+3. try-catch và try-with-resources
+a. try-catch
+Định nghĩa: Cấu trúc này cho phép xử lý exception.
+Bạn có thể đặt mã có thể gây ra exception trong khối try và xử lý exception trong khối catch.
+b. try-with-resources
+Định nghĩa: Được sử dụng để tự động đóng các tài nguyên (như InputStream, OutputStream)
+khi khối try kết thúc.
+Tài nguyên cần phải implements AutoCloseable.
+
+4. Tạo Custom Exception
+Để tạo một custom exception, bạn có thể mở rộng từ lớp Exception hoặc RuntimeException.
+
+
