@@ -1,0 +1,41 @@
+1. Đặc điểm của Set Interface
+Không cho phép phần tử trùng lặp: Mỗi phần tử trong Set là duy nhất,
+không thể có hai phần tử giống nhau.
+Không có thứ tự cố định: Set không duy trì thứ tự của các phần tử.
+Bạn không thể truy cập các phần tử theo chỉ số như trong List.
+Cung cấp nhiều phương thức:
+Các phương thức chính bao gồm add(), remove(), contains(), size(), và isEmpty().
+2. Các lớp triển khai từ Set Interface
+Dưới đây là một số lớp phổ biến triển khai từ Set interface:
+
+HashSet
+LinkedHashSet
+TreeSet
+3. Phân biệt trường hợp sử dụng của từng lớp
+a. HashSet
+Đặc điểm:
+Lưu trữ các phần tử không theo thứ tự.
+Thời gian truy cập phần tử trung bình là O(1).
+Trường hợp sử dụng:
+Khi bạn cần lưu trữ một tập hợp các phần tử duy nhất mà không cần thứ tự,
+và hiệu suất truy cập là ưu tiên.
+
+b. LinkedHashSet
+Đặc điểm:
+
+Giống như HashSet, nhưng duy trì thứ tự thêm các phần tử.
+Thời gian truy cập phần tử trung bình là O(1),
+nhưng việc duy trì thứ tự làm cho nó chậm hơn một chút so với HashSet.
+Trường hợp sử dụng:
+
+Khi bạn cần một tập hợp duy nhất nhưng cũng muốn duy trì thứ tự mà các phần tử được thêm vào.
+
+c. TreeSet
+Đặc điểm:
+
+Sắp xếp các phần tử theo thứ tự tự nhiên hoặc theo một trình so sánh tùy chỉnh.
+Thời gian truy cập phần tử là O(log n) do việc duy trì cây nhị phân.
+Trường hợp sử dụng:
+
+Khi bạn cần lưu trữ các phần tử duy nhất và muốn truy cập chúng theo thứ tự đã sắp xếp.
+
