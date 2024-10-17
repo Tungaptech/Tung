@@ -1,0 +1,46 @@
+1. Process là gì?
+Process là một chương trình đang thực thi.
+Nó bao gồm mã chương trình, dữ liệu, các tài nguyên mà nó đang sử dụng, và một không gian bộ nhớ riêng biệt. Mỗi process chạy trong một không gian bộ nhớ riêng biệt, điều này có nghĩa là các process không thể trực tiếp truy cập vào dữ liệu của nhau.
+
+2. Thread là gì?
+Thread là một đơn vị thực thi nhỏ nhất trong một process.
+Một process có thể có nhiều thread, và tất cả các thread trong cùng một process chia sẻ không gian bộ nhớ và các tài nguyên của process đó. Điều này cho phép các thread giao tiếp với nhau dễ dàng hơn so với các process.
+
+3. Có bao nhiêu cách để tạo một thread trong Java?
+Có hai cách chính để tạo một thread trong Java:
+
+a. Kế thừa từ lớp Thread
+b. Implementing Runnable interface
+
+Khác biệt:
+
+Kế thừa từ Thread: Giới hạn lớp vì Java không hỗ trợ đa kế thừa.
+Phương pháp này dễ dàng hơn cho các tác vụ đơn giản.
+Implementing Runnable: Linh hoạt hơn vì bạn có thể kế thừa từ một lớp khác,
+và có thể chia sẻ một đối tượng Runnable giữa nhiều thread.
+4. Thế nào là multi-thread?
+Multi-threading là khả năng của một process chạy nhiều thread đồng thời.
+Điều này cho phép các tác vụ thực hiện song song,
+tối ưu hóa việc sử dụng CPU và tăng cường hiệu suất của ứng dụng.
+
+Ưu điểm:
+
+Tăng hiệu suất: Các tác vụ có thể chạy đồng thời, giảm thời gian chờ.
+Phản hồi nhanh hơn: Trong ứng dụng GUI,
+các tác vụ nặng có thể chạy trong background mà không làm gián đoạn giao diện người dùng.
+Nhược điểm:
+
+Phức tạp: Quản lý nhiều thread có thể phức tạp, đặc biệt khi có sự tương tác giữa các thread.
+Vấn đề đồng bộ hóa: Cần phải xử lý các vấn đề về truy cập đồng thời vào tài nguyên chia sẻ.
+5. Làm thế nào để biết được một thread, multi-thread đã hoàn thành hay chưa?
+Bạn có thể sử dụng phương thức join() để chờ một thread hoàn thành
+
+6. Có giới hạn việc tạo ra bao nhiêu thread trong một ứng dụng Java hay không?
+Có, số lượng thread tối đa mà một ứng dụng Java có thể tạo ra phụ thuộc vào nhiều yếu tố như:
+
+Tài nguyên hệ thống: Số lượng bộ nhớ và CPU có sẵn.
+Giới hạn của JVM: JVM có thể có giới hạn về số lượng thread tối đa,
+phụ thuộc vào cấu hình hệ thống và hệ điều hành.
+Hiệu suất: Tạo quá nhiều thread có thể dẫn đến overhead và làm giảm hiệu suất ứng dụng.
+Trong thực tế, tốt nhất là không nên tạo quá nhiều thread mà không cần thiết,
+và nên sử dụng các pool thread để quản lý chúng hiệu quả.
