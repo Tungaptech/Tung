@@ -1,0 +1,30 @@
+1. Đặc điểm của Queue Interface
+Thứ tự: Queue thường lưu trữ các phần tử theo nguyên tắc FIFO (First In, First Out),
+nghĩa là phần tử được thêm vào đầu tiên sẽ được lấy ra đầu tiên.
+Không cho phép truy cập ngẫu nhiên:
+Thông thường, bạn không thể truy cập các phần tử trong Queue bằng chỉ số như trong List.
+Cung cấp các phương thức:
+Các phương thức chính bao gồm add(), offer(), remove(), poll(), peek(), element().
+2. Đặc điểm của Deque Interface
+Đầu và cuối: Deque (Double-Ended Queue) cho phép thêm và xóa phần tử từ cả hai đầu (đầu và cuối).
+Cho phép thao tác phong phú:
+Cung cấp nhiều phương thức hơn so với Queue,
+bao gồm các phương thức như addFirst(), addLast(), removeFirst(), removeLast(), peekFirst(), peekLast().
+3. Các lớp triển khai từ Queue và Deque Interfaces
+a. Các lớp triển khai từ Queue
+LinkedList: Cũng là một lớp triển khai từ Deque, nhưng có thể được sử dụng như một Queue.
+PriorityQueue: Một hàng đợi mà phần tử được lấy ra theo thứ tự ưu tiên, không theo thứ tự thêm vào.
+ArrayDeque: Một hàng đợi cho phép thêm và xóa phần tử ở cả hai đầu.
+Trường hợp sử dụng:
+
+LinkedList: Khi bạn cần một hàng đợi có khả năng thêm và xóa phần tử hiệu quả.
+PriorityQueue: Khi bạn cần xử lý các phần tử dựa trên mức độ ưu tiên, như trong các thuật toán sắp xếp.
+ArrayDeque: Khi bạn cần hiệu suất cao hơn cho các thao tác thêm và xóa ở cả hai đầu.
+b. Các lớp triển khai từ Deque
+ArrayDeque: Một trong những lớp triển khai phổ biến, hỗ trợ cả hàng đợi và ngăn xếp.
+LinkedList: Cũng có thể được sử dụng như một Deque.
+Trường hợp sử dụng:
+
+ArrayDeque: Tốt cho các tình huống yêu cầu thao tác nhanh chóng ở cả hai đầu,
+chẳng hạn như trong thuật toán BFS (Breadth-First Search).
+LinkedList: Tốt cho các thao tác cần thêm hoặc xóa thường xuyên
