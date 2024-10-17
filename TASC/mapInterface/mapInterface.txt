@@ -1,0 +1,48 @@
+1. Đặc điểm của Map Interface
+Lưu trữ cặp key-value: Map lưu trữ các phần tử dưới dạng cặp (key, value), trong đó mỗi key là duy nhất.
+Không cho phép key trùng lặp: Mỗi key chỉ có thể xuất hiện một lần trong Map,
+nhưng có thể có nhiều giá trị (value) trùng lặp.
+Không duy trì thứ tự: Map không đảm bảo thứ tự của các phần tử, ngoại trừ một số lớp triển khai cụ thể.
+Cung cấp nhiều phương thức:
+Các phương thức chính bao gồm put(), get(), remove(), containsKey(), size(), và keySet().
+2. Các lớp triển khai từ Map Interface
+Dưới đây là một số lớp phổ biến triển khai từ Map interface:
+
+HashMap
+LinkedHashMap
+TreeMap
+Hashtable
+3. Phân biệt trường hợp sử dụng của từng lớp
+a. HashMap
+Đặc điểm:
+Lưu trữ các cặp key-value không theo thứ tự.
+Thời gian truy cập trung bình là O(1).
+Trường hợp sử dụng:
+Khi bạn cần một bản đồ với hiệu suất cao và không cần duy trì thứ tự.
+
+b. LinkedHashMap
+Đặc điểm:
+
+Giống như HashMap, nhưng duy trì thứ tự thêm các cặp key-value.
+Thời gian truy cập trung bình là O(1).
+Trường hợp sử dụng:
+
+Khi bạn cần một bản đồ với hiệu suất cao và muốn duy trì thứ tự của các phần tử.
+
+c. TreeMap
+Đặc điểm:
+
+Sắp xếp các cặp key-value theo thứ tự tự nhiên hoặc theo một trình so sánh tùy chỉnh.
+Thời gian truy cập là O(log n).
+Trường hợp sử dụng:
+
+Khi bạn cần lưu trữ các cặp key-value và muốn truy cập chúng theo thứ tự đã sắp xếp.
+
+d. Hashtable
+Đặc điểm:
+
+Giống như HashMap, nhưng đồng bộ hóa (synchronized), nên an toàn cho các thao tác đa luồng.
+Không cho phép key hoặc value là null.
+Trường hợp sử dụng:
+
+Khi bạn cần một bản đồ an toàn cho đa luồng và không cần tối ưu hóa hiệu suất như HashMap.
