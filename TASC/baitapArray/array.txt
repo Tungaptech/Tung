@@ -1,0 +1,17 @@
+1. Kiểu mảng trong Java
+Trong Java, mảng (array) là một cấu trúc dữ liệu cho phép lưu trữ một tập hợp các phần tử cùng kiểu.
+Mảng có kích thước cố định, nghĩa là bạn phải chỉ định số lượng phần tử khi khởi tạo.
+
+2. Ưu điểm và nhược điểm của kiểu mảng
+Ưu điểm:
+Truy cập nhanh: Có thể truy cập các phần tử trong mảng thông qua chỉ số (index) với thời gian O(1).
+Đơn giản: Cấu trúc đơn giản, dễ sử dụng và dễ hiểu.
+Lưu trữ đồng nhất: Chứa các phần tử cùng kiểu, giúp đảm bảo tính đồng nhất trong dữ liệu.
+
+Nhược điểm:
+Kích thước cố định: Kích thước của mảng không thể thay đổi sau khi đã khởi tạo,
+dẫn đến việc lãng phí bộ nhớ nếu không sử dụng hết hoặc không thể thêm phần tử nếu hết chỗ.
+Chứa cùng kiểu dữ liệu: Không thể lưu trữ các kiểu dữ liệu khác nhau trong cùng một mảng.
+Quản lý khó khăn với mảng lớn:
+Khi làm việc với mảng lớn, việc thêm, xóa, hoặc sắp xếp có thể trở nên phức tạp và tốn thời gian.
+
