@@ -1,0 +1,50 @@
+1. Đặc điểm của List Interface
+Thứ tự: List lưu trữ các phần tử theo thứ tự mà chúng được thêm vào.
+Điều này có nghĩa là bạn có thể truy cập các phần tử bằng chỉ số (index).
+Cho phép phần tử trùng lặp: Một List có thể chứa nhiều phần tử trùng lặp.
+Cung cấp nhiều phương thức:
+List có nhiều phương thức hữu ích như add(), remove(), get(), indexOf(), size(), v.v.
+2. Các lớp triển khai từ List Interface
+Dưới đây là một số lớp phổ biến triển khai từ List interface:
+
+ArrayList
+LinkedList
+Vector
+Stack (là một lớp con của Vector)
+3. Phân biệt trường hợp sử dụng của từng lớp
+a. ArrayList
+Đặc điểm:
+
+Sử dụng mảng động để lưu trữ các phần tử.
+Thời gian truy cập nhanh (O(1)).
+Thời gian thêm phần tử vào cuối danh sách là O(1),
+nhưng việc chèn hoặc xóa phần tử giữa các phần tử khác có thể mất O(n).
+Trường hợp sử dụng:
+
+Khi cần truy cập thường xuyên đến các phần tử bằng chỉ số và danh sách không thay đổi nhiều.
+
+b. LinkedList
+Đặc điểm:
+Sử dụng cấu trúc dữ liệu danh sách liên kết.
+Thời gian truy cập phần tử chậm hơn (O(n)) nhưng thêm hoặc xóa phần tử ở đầu hoặc cuối danh sách rất nhanh (O(1)).
+Trường hợp sử dụng:
+Khi cần thêm hoặc xóa phần tử thường xuyên, hoặc khi kích thước danh sách không xác định trước.
+
+c. Vector
+Đặc điểm:
+
+Tương tự như ArrayList nhưng là đồng bộ hóa (synchronized), nên an toàn cho các thao tác đa luồng.
+Mặc định có kích thước ban đầu và tự động tăng khi cần.
+Trường hợp sử dụng:
+
+Khi cần một danh sách an toàn cho đa luồng và không cần tối ưu hóa hiệu suất như ArrayList.
+
+d. Stack
+Đặc điểm:
+
+Kế thừa từ Vector, hoạt động theo nguyên tắc LIFO (Last In, First Out).
+Cung cấp các phương thức như push(), pop(), peek().
+Trường hợp sử dụng:
+
+Khi cần quản lý dữ liệu theo thứ tự LIFO,
+như trong các thuật toán đệ quy hoặc khi xử lý các biểu thức toán học.
