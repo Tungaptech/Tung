@@ -1,0 +1,25 @@
+1. Singleton Pattern
+Mục đích
+Singleton Pattern đảm bảo rằng một lớp chỉ có một thể hiện duy nhất trong suốt vòng đời của ứng dụng,
+và cung cấp một điểm truy cập toàn cục đến thể hiện đó.
+
+Cách thức triển khai
+Tạo một lớp với một constructor riêng tư (private).
+Tạo một phương thức static để trả về thể hiện duy nhất của lớp đó.
+Thường sử dụng từ khóa synchronized để đảm bảo an toàn trong môi trường đa luồng.
+Ưu điểm
+Kiểm soát việc tạo ra đối tượng.
+Tiết kiệm tài nguyên bằng cách hạn chế số lượng đối tượng được tạo ra.
+Đảm bảo nhất quán trong các ứng dụng lớn.
+
+2. Factory Method Pattern
+Mục đích
+Factory Method Pattern cung cấp một giao diện để tạo đối tượng trong một lớp cha nhưng cho phép các lớp con quyết định loại đối tượng nào sẽ được tạo. Điều này giúp tách biệt việc tạo đối tượng khỏi việc sử dụng đối tượng.
+
+Cách thức triển khai
+Tạo một lớp trừu tượng (abstract class) với một phương thức tạo đối tượng (factory method).
+Cung cấp các lớp con thực hiện phương thức này để tạo ra các đối tượng cụ thể.
+Ưu điểm
+Tăng tính mở rộng: dễ dàng thêm loại sản phẩm mới mà không làm thay đổi mã hiện có.
+Tách biệt rõ ràng giữa việc tạo và sử dụng đối tượng.
+
