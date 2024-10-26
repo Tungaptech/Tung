@@ -1,0 +1,50 @@
+1. Thứ tự thực hiện trong một câu query SQL
+Trong một câu truy vấn SQL, thứ tự thực hiện các thành phần thường là như sau:
+
+FROM: Xác định bảng dữ liệu.
+WHERE: Lọc dữ liệu.
+GROUP BY: Nhóm dữ liệu.
+HAVING: Lọc nhóm dữ liệu.
+SELECT: Chọn cột cần hiển thị.
+ORDER BY: Sắp xếp kết quả.
+
+2. Các loại JOIN
+JOIN được sử dụng để kết hợp các bản ghi từ hai hoặc nhiều bảng trong một cơ sở dữ liệu.
+
+a. INNER JOIN
+Chỉ lấy các bản ghi có sự khớp giữa hai bảng.
+
+b. LEFT JOIN (LEFT OUTER JOIN)
+Lấy tất cả bản ghi từ bảng bên trái và các bản ghi khớp từ bảng bên phải.
+
+c. RIGHT JOIN (RIGHT OUTER JOIN)
+Lấy tất cả bản ghi từ bảng bên phải và các bản ghi khớp từ bảng bên trái.
+
+d. FULL JOIN (FULL OUTER JOIN)
+Lấy tất cả các bản ghi từ cả hai bảng, khớp hoặc không khớp.
+
+3. Subquery
+Subquery là một truy vấn lồng trong một truy vấn khác. Subquery có thể được sử dụng trong các phần như SELECT, WHERE, hoặc FROM.
+
+4. Common Table Expression (CTE)
+CTE là một truy vấn tạm thời có thể được tham chiếu trong các truy vấn khác. Nó giúp mã truy vấn dễ đọc hơn.
+
+5. Ranking Functions: ROW_NUMBER, RANK, DENSE_RANK
+ROW_NUMBER: Cấp số duy nhất cho mỗi hàng trong một tập hợp.
+RANK: Cấp số cho các hàng giống nhau nhưng có khoảng cách giữa các giá trị giống nhau.
+DENSE_RANK: Cấp số cho các hàng giống nhau mà không có khoảng cách.
+
+6. VIEW
+VIEW là một truy vấn lưu trữ dưới dạng bảng ảo. Bạn có thể thực hiện các thao tác CRUD trên VIEW, nhưng nó có một số hạn chế.
+
+SELECT: Luôn có thể thực hiện.
+INSERT: Có thể thực hiện nếu VIEW chứa tất cả các cột không null.
+UPDATE: Có thể thực hiện nếu VIEW có khả năng truy cập trực tiếp vào cột gốc.
+DELETE: Có thể thực hiện nếu VIEW có khả năng truy cập trực tiếp vào cột gốc.
+
+7. PROCEDURE
+PROCEDURE là một tập hợp các câu lệnh SQL được lưu trữ và có thể được thực thi bằng cách gọi tên của nó. Mục đích của Procedure là tái sử dụng mã, giảm độ phức tạp và tối ưu hóa hiệu suất.
+
+Sử dụng Procedure trong Java
+Để gọi một Procedure trong Java, bạn có thể sử dụng JDBC.
+
