@@ -1,0 +1,17 @@
+Stored Procedure (thủ tục lưu trữ) là một tập hợp các câu lệnh SQL được lưu trữ trong cơ sở dữ liệu
+và có thể được thực thi theo yêu cầu.
+Đây là một trong những cách để tổ chức mã SQL và thường được sử dụng để thực hiện các tác vụ lặp đi lặp lại
+hoặc phức tạp mà cần nhiều câu lệnh SQL.
+
+Các đặc điểm của Stored Procedure
+Tái sử dụng: Stored Procedure cho phép bạn viết mã SQL một lần và gọi lại nhiều lần, giúp tiết kiệm thời gian và công sức.
+
+Tăng hiệu suất: Khi một Stored Procedure được biên dịch,
+nó có thể chạy nhanh hơn so với việc gửi từng câu lệnh SQL riêng biệt từ ứng dụng đến cơ sở dữ liệu.
+
+Bảo mật: Stored Procedure có thể cung cấp một lớp bảo mật,
+cho phép người dùng thực hiện các thao tác trên dữ liệu mà không cần quyền truy cập trực tiếp vào bảng dữ liệu.
+
+Quản lý giao dịch: Bạn có thể kiểm soát các giao dịch (commit, rollback) bên trong Stored Procedure.
+
+Chấp nhận tham số: Stored Procedure có thể nhận tham số đầu vào và đầu ra, cho phép bạn truyền dữ liệu vào và lấy dữ liệu ra.
