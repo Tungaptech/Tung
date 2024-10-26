@@ -1,0 +1,39 @@
+1. Phân biệt Clustered Index và Non-Clustered Index
+Clustered Index:
+
+Là index mà thứ tự của các hàng trong bảng được sắp xếp theo thứ tự của index.
+Mỗi bảng chỉ có thể có một clustered index, vì dữ liệu chỉ có thể được sắp xếp theo một cách duy nhất.
+Ví dụ: Trong bảng Employees, nếu ta tạo clustered index trên cột EmployeeID, dữ liệu sẽ được lưu trữ theo thứ tự EmployeeID.
+Non-Clustered Index:
+
+Là index không thay đổi thứ tự của dữ liệu trong bảng.
+Bảng có thể có nhiều non-clustered index.
+Ví dụ: Nếu ta tạo non-clustered index trên cột LastName trong bảng Employees, thì index này sẽ lưu trữ một danh sách các LastName và địa chỉ đến các hàng dữ liệu trong bảng.
+So sánh về performance:
+
+Clustered Index:
+Tốc độ truy xuất nhanh hơn cho các truy vấn có điều kiện theo cột được đánh index.
+Tuy nhiên, việc thêm, cập nhật hoặc xóa dữ liệu có thể chậm hơn, vì có thể cần phải sắp xếp lại dữ liệu.
+Non-Clustered Index:
+Tốc độ truy xuất nhanh hơn cho các truy vấn không theo thứ tự.
+Tuy nhiên, nếu truy vấn cần truy xuất nhiều cột từ bảng chính, có thể cần thêm một lần truy xuất dữ liệu, làm giảm hiệu suất.
+Nguyên nhân:
+
+Clustered index tối ưu cho các truy vấn cần sắp xếp hoặc lọc dữ liệu theo thứ tự đã đánh index, trong khi non-clustered index linh hoạt hơn và hỗ trợ nhiều truy vấn khác nhau.
+2. Giới hạn số lượng index trong một bảng
+Có giới hạn về số lượng index có thể được tạo trong một bảng, thường phụ thuộc vào hệ quản trị cơ sở dữ liệu (DBMS) đang sử dụng. Ví dụ:
+
+Trong SQL Server, tối đa có thể tạo 999 non-clustered index cho mỗi bảng.
+Trong MySQL, giới hạn có thể khác tùy theo engine lưu trữ.
+Giải thích:
+
+Giới hạn này giúp duy trì hiệu suất của cơ sở dữ liệu và giảm thiểu việc tiêu tốn tài nguyên khi quá nhiều index được tạo ra.
+3. Cơ sở để đánh index
+Việc đánh index thường dựa trên:
+
+Tần suất truy vấn: Cột thường xuyên được sử dụng trong WHERE, JOIN, ORDER BY.
+Kích thước bảng: Các bảng lớn thường cần nhiều index hơn để cải thiện tốc độ truy xuất.
+Loại truy vấn: Các truy vấn đọc nhiều hơn (SELECT) so với ghi (INSERT, UPDATE) nên được ưu tiên.
+4. Cách biết một câu query đã sử dụng index hay chưa
+Giải thích query plan: Sử dụng lệnh như EXPLAIN (trong MySQL) hoặc SET STATISTICS IO ON (trong SQL Server) để kiểm tra cách thức thực hiện truy vấn và xem liệu có sử dụng index hay không.
+Xem thông tin thống kê: Một số DBMS cho phép bạn xem thông tin thống kê về index và cách chúng được sử dụng.
