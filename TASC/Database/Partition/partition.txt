@@ -1,0 +1,31 @@
+Khi nào nên đánh partition trong một bảng
+Khối lượng dữ liệu lớn: Khi bảng có khối lượng dữ liệu lớn (hàng triệu bản ghi),
+việc phân vùng giúp cải thiện hiệu suất truy vấn và quản lý dữ liệu.
+
+Tần suất truy vấn theo khoảng thời gian: Nếu bạn thường xuyên truy vấn dữ liệu theo khoảng thời gian (như ngày, tháng, năm),
+phân vùng theo thời gian có thể giúp tối ưu hóa hiệu suất.
+
+Quản lý dữ liệu dễ dàng hơn: Phân vùng giúp dễ dàng quản lý và bảo trì dữ liệu.
+Ví dụ, bạn có thể dễ dàng xóa hoặc lưu trữ dữ liệu cũ bằng cách xóa một phân vùng.
+
+Chỉ định quyền truy cập: Khi có nhiều người dùng hoặc nhóm khác nhau cần truy cập vào dữ liệu,
+phân vùng có thể giúp kiểm soát quyền truy cập dễ hơn.
+
+Cải thiện hiệu suất ghi: Trong một số trường hợp, khi có nhiều thao tác ghi,
+phân vùng có thể cải thiện hiệu suất ghi bằng cách giảm thiểu xung đột trên các trang dữ liệu.
+
+Lợi ích của việc đánh partition trong truy vấn
+Cải thiện hiệu suất truy vấn: Phân vùng giúp tối ưu hóa truy vấn bằng cách chỉ quét các phân vùng cần thiết thay vì toàn bộ bảng,
+từ đó giảm thời gian thực thi truy vấn.
+
+Giảm thời gian quét dữ liệu: Khi truy vấn chỉ cần tìm kiếm trong một phân vùng nhỏ, thời gian quét dữ liệu giảm đáng kể,
+giúp tăng tốc độ truy vấn.
+
+Tối ưu hóa tài nguyên hệ thống: Việc giảm tải lượng dữ liệu cần quét giúp tiết kiệm bộ nhớ và CPU,
+làm cho hệ thống có thể xử lý nhiều truy vấn hơn đồng thời.
+
+Dễ dàng bảo trì: Việc thực hiện bảo trì (như sao lưu, khôi phục, hoặc xóa) trên các phân vùng cụ thể dễ hơn,
+giúp quản lý hệ thống hiệu quả hơn.
+
+Tăng cường khả năng phân tán: Phân vùng cho phép dữ liệu được phân tán trên nhiều đĩa hoặc server,
+giúp tăng cường khả năng mở rộng và phân tán tải.
